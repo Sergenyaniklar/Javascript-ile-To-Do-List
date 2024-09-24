@@ -1,4 +1,4 @@
-// Toast göstermek için fonksiyon
+// Toast için fonksiyon
 function showToast(message) {
     const toastEl = document.getElementById('toast');
     const toastBody = document.querySelector('.toast-body');
@@ -8,7 +8,7 @@ function showToast(message) {
     toast.show();
   }
   
-  // Görev Ekleme
+  // Listeye Ekleme
   document.getElementById('add-btn').addEventListener('click', function() {
     const taskInput = document.getElementById('task-input');
     const taskText = taskInput.value.trim();
@@ -32,7 +32,7 @@ function showToast(message) {
       <button class="btn btn-danger btn-sm remove">Çıkar</button>
     `;
   
-    // Yapıldı olarak işaretlemek için tıklama olayı
+    // Yapıldı olayı
     li.addEventListener('click', function(e) {
       if (!e.target.classList.contains('remove')) {
         li.classList.toggle('done');
@@ -40,7 +40,7 @@ function showToast(message) {
       }
     });
   
-    // Silme butonuna basıldığında görevi çıkart
+    // Silme çıkart
     li.querySelector('.remove').addEventListener('click', function(e) {
       e.stopPropagation();
       li.remove();
